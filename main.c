@@ -7,6 +7,7 @@
 #include "funcoes.h"
 
 int main () {
+ //preciso criar shared memory como função e ter a fila dentro, e criar pipes tb
     srand(time(NULL)); //crio uma seed pra gerar numero aleatório
     int i, pid;
     for (i = 1; i <= 3; ++i) { //loop para criar processos
