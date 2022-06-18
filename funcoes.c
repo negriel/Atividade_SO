@@ -5,25 +5,22 @@
     #include <time.h>//necessário p/ função time()
     #include "funcoes.h"
 
-    struct Fila{
-        int inicio, final, qtd;
-        int numero[MAX];
-    };
-
-    
-    void gera_numeros (int i){
-    printf("o processo %d, com o pid %d, está gerando numeros aleatorios\n",i, getpid());
+    void teste (int i){
+    printf("Sucesso! o processo %d, com o pid %d, está gerando numeros aleatorios\n",i, getpid());
     int j;
     
   
     for (j=0; j < 10; j++)
     {
     // gerando valores aleatórios na faixa de 0 a 1000
-    printf("%d\n", rand() % 1000);
+    printf("%d\n", rand() % 1000+1);
     }
-
+    }
     
-
+    struct Fila{
+        int inicio, final, qtd;
+        int numero[MAX];
+    };
 
     Fila* cria_Fila(){
         Fila *fi;
@@ -38,6 +35,7 @@
     void libera_Fila(Fila* fi){
         free(fi);
     }
+    
     int tamanho_Fila(Fila* fi){
         if(fi == NULL){
             return -1;
@@ -89,4 +87,3 @@
         }
     }
 
-    }
