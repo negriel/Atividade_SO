@@ -1,13 +1,7 @@
 #define MAX 10
 
-void teste (int i);
-
-struct Fila{
-        int inicio, final, qtd;
-        int numero[MAX];
-    };
 typedef struct Fila Fila;
-
+void gera_numeros (int i);
 Fila* cria_Fila();
 void libera_Fila(Fila* fi);
 int tamanho_Fila(Fila* fi);
